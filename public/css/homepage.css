@@ -1,0 +1,239 @@
+/* General styles for better typography and spacing */
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0; /* Pastikan tidak ada margin default pada body */
+    padding: 0; /* Pastikan tidak ada padding default pada body */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #1e3c72; /* Deep blue for headings */
+}
+
+.text-primary {
+    color: #2a5298 !important; /* Adjust primary color for Bootstrap */
+}
+
+/* Navbar styling */
+.navbar-dark .navbar-brand {
+    color: #ffc107 !important; /* Warning color for brand */
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    transition: color 0.3s ease;
+}
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: white !important;
+}
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Primary Button Styles */
+.btn-primary {
+    background-color: #2a5298;
+    border-color: #2a5298;
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #1e3c72;
+    border-color: #1e3c72;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Warning Button Styles (for hero section) */
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #1e3c72;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+    color: #1e3c72;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Outline Light Button Styles (for hero section secondary button) */
+.btn-outline-light {
+    color: white;
+    border-color: white;
+    transition: all 0.3s ease;
+}
+.btn-outline-light:hover {
+    background-color: white;
+    color: #2a5298;
+    border-color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Hero Section Specific Styles */
+.hero-section {
+    margin-top: 0;
+}
+
+.hero-section .carousel-item {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 550px;
+}
+
+.hero-section .carousel-caption {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    padding: 2rem 15px;
+}
+
+.hero-section .carousel-caption h1 {
+    font-size: clamp(2rem, 3.8vw, 3.2rem);
+    line-height: 1.25;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+.hero-section .carousel-caption p {
+    font-size: clamp(0.9rem, 1.6vw, 1.15rem);
+    margin-bottom: 1.2rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* Button Group in Carousel Caption */
+.hero-section .carousel-caption .button-group {
+    margin-top: 1.5rem;
+    gap: 15px;
+}
+.hero-section .carousel-caption .button-group .btn {
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem);
+    padding: 0.6rem 1.4rem;
+    min-width: 170px;
+}
+
+/* Carousel Controls & Indicators */
+.hero-section .carousel-control-prev,
+.hero-section .carousel-control-next {
+    width: 6%;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+.hero-section .carousel-control-prev:hover,
+.hero-section .carousel-control-next:hover {
+    opacity: 1;
+}
+.hero-section .carousel-control-prev-icon,
+.hero-section .carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    opacity: 1;
+}
+
+.hero-section .carousel-indicators {
+    bottom: 20px;
+    z-index: 3;
+}
+.hero-section .carousel-indicators button {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 6px;
+    border: none;
+    transition: all 0.3s ease;
+}
+.hero-section .carousel-indicators button.active {
+    background-color: white;
+    border: 2px solid #ffc107;
+    transform: scale(1.1);
+}
+
+/* Introduction Section Styles */
+.intro-section {
+    background-color: #f8f9fa;
+    padding: 5rem 2rem;
+}
+
+/* Why Choose Us Section Styles */
+.why-us-section {
+    background-color: #fff;
+}
+
+.feature-card {
+    border-radius: 1rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.icon-circle {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(to right, #2a5298, #1e3c72);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #1e3c72 !important;
+    color: white;
+    padding: 1.5rem 0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 450px;
+    }
+    .hero-section .carousel-caption {
+        padding: 1.5rem 10px;
+    }
+    .hero-section .carousel-caption h1 {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+        margin-bottom: 0.5rem;
+    }
+    .hero-section .carousel-caption p {
+        font-size: clamp(0.8rem, 2.5vw, 1rem);
+        margin-bottom: 1rem;
+    }
+    .hero-section .carousel-caption .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero-section .carousel-caption .button-group .btn {
+        font-size: 0.85rem;
+        padding: 0.5rem 1.2rem;
+        min-width: 150px;
+    }
+    .intro-section, .why-us-section {
+        padding: 3rem 1rem;
+    }
+}

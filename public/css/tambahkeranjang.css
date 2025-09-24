@@ -1,0 +1,225 @@
+.cart-page-container {
+    background-color: #f8fafc;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    font-family: 'Inter', sans-serif;
+}
+
+.page-title {
+    color: #1e40af;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alert-success, .alert-info {
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.alert-success {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.alert-info {
+    background-color: #e0f2fe;
+    color: #1e40af;
+}
+
+.alert-info a {
+    color: #1e40af;
+    font-weight: 600;
+    text-decoration: none;
+}
+.alert-info a:hover {
+    text-decoration: underline;
+}
+
+/* Kartu Item Keranjang */
+.cart-item-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-cell img.product-thumbnail {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+/* Tombol Aksi (Hapus) */
+.delete-btn {
+    background-color: #ef4444;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(220, 38, 38, 0.2);
+}
+
+/* Ringkasan Belanja */
+.summary-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    background-color: #ffffff;
+}
+
+.summary-title {
+    color: #1e40af;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.summary-list .list-group-item {
+    border: none;
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+}
+
+.total-amount {
+    color: #16a34a;
+    font-size: 1.3rem;
+}
+
+/* Tombol Gradient */
+.btn-gradient {
+    background: linear-gradient(90deg, #3b82f6, #10b981);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(90deg, #2563eb, #059669);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(16, 185, 129, 0.3);
+}
+
+/* Pesan Keranjang Kosong */
+.empty-cart-message {
+    padding: 3rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    margin-top: 3rem;
+}
+
+.empty-cart-message .mdi-cart-off {
+    font-size: 7rem;
+    color: #d1d5db;
+    margin-bottom: 1.5rem;
+}
+
+.continue-shopping-btn {
+    background: linear-gradient(90deg, #6b7280, #4b5563);
+    color: #fff;
+    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+}
+
+.continue-shopping-btn:hover {
+    background: linear-gradient(90deg, #4b5563, #374151);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(75, 85, 99, 0.2);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    background-color: #f1f5f9;
+    border-radius: 20px;
+    padding: 4px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+    margin-top: 0.5rem;
+}
+
+.quantity-selector .btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1;
+    border: none;
+    background-color: transparent;
+    color: #64748b;
+    transition: all 0.2s ease;
+    padding: 0;
+}
+
+.quantity-selector .btn:hover {
+    color: #1e40af;
+    transform: scale(1.1);
+}
+
+.quantity-selector .form-control {
+    flex-grow: 1;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2937;
+    padding: 0;
+    /* Hide number input spinners */
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+}
+
+.quantity-selector .form-control::-webkit-outer-spin-button,
+.quantity-selector .form-control::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.update-quantity-btn {
+    display: none;
+}

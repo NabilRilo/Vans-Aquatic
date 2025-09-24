@@ -1,0 +1,107 @@
+/* --- Gaya Khusus untuk Halaman Pesanan Berhasil (pesanan-berhasil.blade.php) --- */
+
+.order-success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; /* Memastikan card berada di tengah vertikal di viewport */
+    padding: 20px; /* Tambahkan padding agar tidak terlalu mepet di layar kecil */
+}
+
+.order-success-card {
+    max-width: 600px; /* Lebar maksimum card */
+    width: 90%; /* Responsif untuk layar lebih kecil */
+    background-color: #ffffff;
+    border-radius: 15px; /* Sudut lebih membulat */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Bayangan yang lebih menonjol */
+    padding: 40px 30px; /* Padding internal */
+    text-align: center; /* Teks di tengah */
+    animation: fadeIn 0.8s ease-out; /* Animasi fade-in saat dimuat */
+}
+
+.order-success-card .card-title {
+    color: #28a745; /* Warna hijau untuk judul sukses */
+    font-size: 2.5rem; /* Ukuran font lebih besar */
+    font-weight: 800; /* Sangat tebal */
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.order-success-card .card-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Tombol Kembali ke Beranda */
+.order-success-card .btn-primary {
+    margin-top: 25px;
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.order-success-card .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.25);
+}
+
+/* Bagian Kontak Admin */
+.contact-admin {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px dashed #e0e0e0; /* Garis putus-putus pemisah */
+}
+
+.contact-admin p {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.contact-admin .btn-outline-success {
+    border-color: #28a745;
+    color: #28a745;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.contact-admin .btn-outline-success:hover {
+    background-color: #28a745;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+}
+
+.contact-admin .mdi {
+    vertical-align: middle;
+    margin-right: 5px;
+    font-size: 1.1em;
+}
+
+.contact-admin small.text-muted {
+    font-size: 0.8rem;
+    margin-top: 10px !important;
+}
+
+/* Keyframe untuk animasi fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

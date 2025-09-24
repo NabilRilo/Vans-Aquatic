@@ -1,0 +1,42 @@
+/* Styling untuk kartu pilihan metode pembayaran */
+.payment-method-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.payment-method-card:hover {
+    background-color: #f8f9fa;
+    border-color: #adb5bd;
+}
+
+/* Styling untuk ikon di dalam kartu */
+.payment-method-card i {
+    font-size: 2rem; /* Ukuran ikon */
+    color: var(--bs-primary);
+}
+
+/* Styling saat radio button (yang disembunyikan) terpilih.
+Kita menargetkan label yang berdekatan dengannya.
+*/
+.btn-check:checked + .payment-method-card {
+    border-color: var(--bs-primary);
+    background-color: #e9f3ff; /* Warna biru muda */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+    color: var(--bs-primary);
+}
+
+/* Accordion header custom */
+.accordion-button:not(.collapsed) {
+    color: var(--bs-primary);
+    background-color: #f8f9fa;
+}
+.accordion-button:focus {
+    box-shadow: none;
+}

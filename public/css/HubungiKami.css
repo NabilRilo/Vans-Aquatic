@@ -1,0 +1,297 @@
+/* Konfigurasi Variabel Warna & Properti (Tema Van's Aquatic) */
+:root {
+    --primary-font: 'Poppins', sans-serif;
+    --color-light-blue: #ADD8E6; /* Light Blue, seperti air */
+    --color-medium-blue: #87CEEB; /* Sky Blue */
+    --color-dark-blue: #4682B4; /* Steel Blue */
+    --color-light-green: #90EE90; /* Light Green */
+    --color-medium-green: #3CB371; /* Medium Sea Green */
+    --color-accent-yellow: #FFD700; /* Gold */
+    --color-text-dark: #34495e;
+    --color-text-light: #ffffff;
+    --color-bg-body: #ecf0f1; /* Light gray background */
+    --color-card-bg: #ffffff;
+    --color-shadow-light: rgba(0, 0, 0, 0.08);
+    --color-shadow-medium: rgba(0, 0, 0, 0.15);
+    --border-radius-card: 15px;
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+}
+
+/* Pengaturan Dasar Body */
+body {
+    font-family: var(--primary-font);
+    background-color: var(--color-bg-body);
+    color: var(--color-text-dark);
+    margin: 0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Mengatur item ke atas agar header tidak terpotong */
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Dekorasi di atas judul */
+.header-decoration {
+    margin-bottom: 20px;
+    color: var(--color-accent-yellow); /* Warna emas untuk dekorasi */
+}
+
+.header-decoration svg {
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.2)); /* Sedikit bayangan pada ikon */
+}
+
+.page-title {
+    font-size: 2.8em;
+    color: var(--color-dark-blue);
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Grid untuk Kartu Kontak */
+.contact-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Gaya Dasar Kartu Info */
+.info-card {
+    background-color: var(--color-card-bg);
+    border-radius: var(--border-radius-card);
+    padding: 30px 20px;
+    box-shadow: 0 10px 25px var(--color-shadow-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-text-dark);
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px var(--color-shadow-medium);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.card-icon svg {
+    width: 60%;
+    height: 60%;
+    transition: color var(--transition-fast);
+}
+
+/* Warna Spesifik untuk Setiap Kartu */
+.address-card {
+    background-color: var(--color-light-blue); /* Warna biru muda untuk alamat */
+}
+.address-card .card-icon {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.address-card .card-icon svg {
+    color: var(--color-dark-blue);
+}
+.address-card h3 { color: var(--color-dark-blue); }
+.address-card p { color: var(--color-text-dark); }
+.address-card .map-text-link { color: var(--color-dark-blue); font-weight: 600; }
+.address-card .map-text-link:hover { text-decoration: underline; }
+
+
+.whatsapp-card {
+    background-color: var(--color-light-green); /* Warna hijau muda untuk WhatsApp */
+}
+.whatsapp-card .card-icon {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.whatsapp-card .card-icon svg {
+    color: var(--color-medium-green);
+}
+.whatsapp-card h3 { color: var(--color-medium-green); }
+.whatsapp-card a {
+    display: block;
+    background-color: var(--color-medium-green);
+    color: var(--color-text-light);
+    padding: 8px 15px;
+    margin: 8px auto; /* Auto margin untuk tengah */
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    width: fit-content; /* Sesuaikan lebar dengan konten */
+    min-width: 180px; /* Lebar minimum untuk tombol */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+.whatsapp-card a:hover {
+    background-color: #2e8b57; /* Sedikit lebih gelap */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.phone-card {
+    background-color: var(--color-accent-yellow); /* Warna kuning untuk Telepon */
+}
+.phone-card .card-icon {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.phone-card .card-icon svg {
+    color: var(--color-dark-blue);
+}
+.phone-card h3 { color: var(--color-dark-blue); }
+.phone-card p {
+    font-size: 1.5em; /* Ukuran lebih besar untuk nomor telepon */
+    font-weight: 700;
+    color: var(--color-dark-blue);
+    margin: 10px 0;
+}
+.phone-card .phone-text-link {
+    display: inline-block;
+    background-color: var(--color-dark-blue);
+    color: var(--color-text-light);
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+.phone-card .phone-text-link:hover {
+    background-color: #36678e;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Styling Umum untuk Konten Kartu */
+.info-card h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+/* Bagian Peta */
+.map-section {
+    background-color: var(--color-card-bg);
+    border-radius: var(--border-radius-card);
+    padding: 30px;
+    box-shadow: 0 10px 25px var(--color-shadow-light);
+    margin-top: 40px;
+}
+
+.map-section h2 {
+    font-size: 2em;
+    color: var(--color-dark-blue);
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Rasio aspek 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--border-radius-card);
+    box-shadow: 0 5px 15px var(--color-shadow-light);
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+    .page-title {
+        font-size: 2.2em;
+        margin-bottom: 30px;
+    }
+    .contact-cards-grid {
+        gap: 20px;
+    }
+    .info-card {
+        padding: 25px 15px;
+    }
+    .info-card h3 {
+        font-size: 1.3em;
+    }
+    .info-card p, .info-card a {
+        font-size: 0.95em;
+    }
+    .map-section {
+        padding: 20px;
+    }
+    .map-section h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px 0;
+    }
+    .page-title {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+    .header-decoration svg {
+        width: 50px;
+        height: 50px;
+    }
+    .info-card {
+        padding: 20px 10px;
+    }
+    .info-card h3 {
+        font-size: 1.2em;
+    }
+    .info-card p, .info-card a {
+        font-size: 0.9em;
+    }
+    .whatsapp-card a, .phone-card .phone-text-link {
+        min-width: unset; /* Hapus min-width agar lebih responsif */
+        width: 90%; /* Lebar hampir penuh */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .map-section h2 {
+        font-size: 1.5em;
+    }
+}

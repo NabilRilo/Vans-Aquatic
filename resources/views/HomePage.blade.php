@@ -5,6 +5,32 @@
 @section('content')
 
 <section class="hero-section position-relative overflow-hidden" style="height: 85vh; min-height: 650px;">
+    
+    {{-- ======================================================= --}}
+    {{-- BAGIAN BARU: LOGOUT BUTTON (Hanya tampil jika @auth) --}}
+    {{-- ======================================================= --}}
+    @auth
+    <div class="position-absolute top-0 end-0 m-4 z-index-10">
+        
+        {{-- Tombol Utama untuk aksi belanja, dll. --}}
+        <a href="{{ url('/fishView') }}" class="btn btn-warning me-2 px-4 rounded-pill shadow-sm">
+            <i class="mdi mdi-shopping me-1"></i> Mulai Belanja
+        </a>
+        
+        {{-- 1. Form tersembunyi untuk proses Logout (POST) --}}
+        <form id="logout-form-home" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
+        
+        {{-- 2. Tombol yang memicu pengiriman form logout --}}
+        <a class="btn btn-danger text-white px-4 rounded-pill shadow-sm" href="#" 
+           onclick="event.preventDefault(); document.getElementById('logout-form-home').submit();">
+           <i class="mdi mdi-logout me-1"></i> Logout
+        </a>
+    </div>
+    @endauth
+    {{-- ======================================================= --}}
+    
     <div id="heroCarousel" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="6000">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -123,6 +149,16 @@
     <div class="container">
         <p class="mb-0">Bersama laut, kami tumbuh | Van's Aquatic</p>
         <p class="mb-0 small">&copy; {{ date('Y') }} Van's Aquatic. All rights reserved.</p>
+        
+        {{-- Tombol Logout di Footer (Optional, hanya tampil jika @auth) --}}
+        @auth
+        <form id="logout-form-footer" action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button type="submit" class="btn btn-link btn-sm text-warning mt-2 p-0">
+                <i class="mdi mdi-logout-variant me-1"></i> Logout
+            </button>
+        </form>
+        @endauth
     </div>
 </footer>
 
